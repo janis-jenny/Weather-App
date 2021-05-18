@@ -1,26 +1,26 @@
-const base = require("./webpack.base");
-const { merge } = require("webpack-merge");
+const { merge } = require('webpack-merge');
+const base = require('./webpack.base');
 
 const devConfig = {
-  mode: "development",
+  mode: 'development',
   output: {
     
     assetModuleFilename: '[name][ext][query]'
   },
   devServer: {
     port: 3000,
-    contentBase: "../dist",
+    contentBase: '../dist',
     open: true,
     hot:true
   },
   module: {
     rules: [
       {
-        test: /.(scss)$/,
+        test: /\.css$/i,
         use: [
-          "style-loader",
-          "css-loader",
-          "sass-loader"
+          'style-loader',
+          'css-loader',
+          'sass-loader'
         ]
       }
     ]

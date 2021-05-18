@@ -1,29 +1,29 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
-const TerserPlugin = require("terser-webpack-plugin");
+const TerserPlugin = require('terser-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const base = require("./webpack.base");
-const { merge } = require("webpack-merge");
+const base = require('./webpack.base');
+const { merge } = require('webpack-merge');
 
 const prodConfig = {
-  mode: "production",
+  mode: 'production',
   output: {
-    filename: "app.[contenthash].js",
+    filename: 'app.[contenthash].js',
     assetModuleFilename: 'images/[name][ext][query]'
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "[name][contenthash].css"
+      filename: '[name][contenthash].css'
     })
   ],
   module: {
     rules: [
       {
-        test: /.(scss)$/,
+        test: /\.css$/i,
         use: [
           MiniCssExtractPlugin.loader,
-          "css-loader",
-          "sass-loader"
+          'css-loader',
+          'sass-loader'
         ]
       },
     ]
