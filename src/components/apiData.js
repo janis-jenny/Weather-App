@@ -1,5 +1,5 @@
 /* eslint-disable linebreak-style */
-import API_KEY from './api';
+import { BASE_URL, API_KEY } from './api';
 import Error404 from '../images/Error404.png';
 
 class ApiData {
@@ -29,14 +29,16 @@ class ApiData {
   }
 
   static showImgError() {
+    const content = document.getElementById('content');
+    content.innerHTML = '';
     const img = document.createElement('img');
     img.src = Error404;
-    document.body.append(img);
+    content.append(img);
   }
 
   async getApiData() {
     try {
-      const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${this.city}&appid=${this.apiKey}`, {
+      const res = await fetch(`${BASE_URL}q=${this.city}&appid=${this.apiKey}`, {
         mode: 'cors',
       });
       const data = await res.json();
