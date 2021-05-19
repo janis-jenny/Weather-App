@@ -2,19 +2,19 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const base = require('./webpack.base');
 const { merge } = require('webpack-merge');
+const base = require('./webpack.base');
 
 const prodConfig = {
   mode: 'production',
   output: {
     filename: 'app.[contenthash].js',
-    assetModuleFilename: 'images/[name][ext][query]'
+    assetModuleFilename: 'images/[name][ext][query]',
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: '[name][contenthash].css'
-    })
+      filename: '[name][contenthash].css',
+    }),
   ],
   module: {
     rules: [
@@ -23,14 +23,14 @@ const prodConfig = {
         use: [
           MiniCssExtractPlugin.loader,
           'css-loader',
-          'sass-loader'
-        ]
+          'sass-loader',
+        ],
       },
-    ]
+    ],
   },
   optimization: {
     splitChunks: {
-      chunks: 'all'
+      chunks: 'all',
     },
     minimize: true,
     minimizer: [
@@ -39,8 +39,8 @@ const prodConfig = {
       new TerserPlugin({
         extractComments: false,
       }),
-    ]
-  }
-}
+    ],
+  },
+};
 
-module.exports = merge(base, prodConfig)
+module.exports = merge(base, prodConfig);

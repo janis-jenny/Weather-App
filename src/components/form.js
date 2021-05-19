@@ -1,6 +1,5 @@
 import ApiData from './apiData';
-import * from './render';
-import './styles/form.scss';
+import Render from './render';
 
 class Form {
   constructor() {
@@ -8,10 +7,11 @@ class Form {
   }
 
   static renderData(value) {
-    renderDegrees(value);
-    renderTemp(value);
-    renderHumidity(value);
-    renderClimate(value);
+    const render = new Render(value);
+    render.renderDegrees();
+    render.renderTemp();
+    render.renderHumidity();
+    render.renderClimate();
   }
 
   static weather(city) {
@@ -38,7 +38,7 @@ class Form {
     return form;
   }
 
-  submitForm() {
+  static submitForm() {
     const form = document.getElementById('from-city');
     form.addEventListener('submit', (e) => {
       e.preventDefault();

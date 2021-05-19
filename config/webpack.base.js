@@ -1,33 +1,31 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const path = require("path");
-
-
+const path = require('path');
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: './src/index.js',
   output: {
-    filename: "app.js",
-    path: path.resolve(__dirname, "../dist"),
-    publicPath: "",
+    filename: 'app.js',
+    path: path.resolve(__dirname, '../dist'),
+    publicPath: '',
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html'
-    })
+      template: './src/index.html',
+    }),
   ],
   module: {
     rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: "babel-loader"
+        use: 'babel-loader',
       },
       {
         test: /\.(?:ico|gif|png|jpg|jpeg|svg)$/i,
         type: 'asset/resource',
       },
-    ]
+    ],
   },
 
-  devtool: "source-map"
-}
+  devtool: 'source-map',
+};
