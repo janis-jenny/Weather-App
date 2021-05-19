@@ -64,22 +64,9 @@ const renderHumidity = (data) => {
   content.append(p);
 }
 
-const renderlCimate = (data) => {
+const renderClimate = (data) => {
   const p = document.createElement('p');
-  const body = document.getElementsByTagName('body')[0];
-  if (data.icon) {
-    const iconLetter = (data.icon.split(''))[2];
-    if (iconLetter === 'n') {
-      body.className = 'bg-nigth';
-    } else {
-      body.className = 'bg-day';
-    }
-  }
   p.innerHTML = `Climate: ${data.climate}`;
   p.className = 'temp-container';
-  const image = document.createElement('img');
-  image.className = 'climate-image';
-  image.src = `http://openweathermap.org/img/wn/${data.icon}@4x.png`;
   content.append(p);
-  content.append(image);
 }
