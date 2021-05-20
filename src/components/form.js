@@ -12,11 +12,14 @@ class Form {
     render.renderTemp();
     render.renderHumidity();
     render.renderClimate();
+    console.log('AQUIII')
+    console.log(renderClimate())
   }
 
   static weather(city) {
     const wheather = new ApiData(city.value);
     wheather.getApiData().then((value) => { Form.renderData(value); });
+    
   }
 
   createForm() {

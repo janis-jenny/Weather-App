@@ -22,13 +22,18 @@ class ApiData {
       country: data.sys.country,
       temperature: ApiData.convertKtoC(data.main.temp).temp,
       humidity: data.main.humidity,
-      condition: data.weather[0].description,
+      climate: data.weather[0] ? data.weather[0].description : '',
+      
       icon: data.weather[0].icon,
       windSpeed: data.wind.speed,
+      
     };
+    
   }
 
   static showImgError() {
+    const type = document.getElementById('type');
+    type.innerHTML = '';
     const content = document.getElementById('content');
     content.innerHTML = '';
     const img = document.createElement('img');

@@ -72,6 +72,8 @@ class Render {
     p.innerHTML = `Climate: ${this.data.climate}`;
     p.className = 'temp-container';
     this.content.append(p);
+    
   }
+  
 }
 export default Render;
