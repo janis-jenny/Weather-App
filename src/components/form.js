@@ -12,8 +12,8 @@ class Form {
     render.renderTemp();
     render.renderHumidity();
     render.renderClimate();
-    console.log('AQUIII')
-    console.log(renderClimate())
+    render.renderWind();
+    render.renderCountry();
   }
 
   static weather(city) {
@@ -36,7 +36,6 @@ class Form {
     button.type = 'submit';
     form.append(input);
     form.append(button);
-
     this.container.append(form);
     return form;
   }

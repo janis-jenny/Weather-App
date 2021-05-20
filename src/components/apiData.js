@@ -23,12 +23,9 @@ class ApiData {
       temperature: ApiData.convertKtoC(data.main.temp).temp,
       humidity: data.main.humidity,
       climate: data.weather[0] ? data.weather[0].description : '',
-      
       icon: data.weather[0].icon,
       windSpeed: data.wind.speed,
-      
     };
-    
   }
 
   static showImgError() {
@@ -49,7 +46,7 @@ class ApiData {
       const data = await res.json();
       return this.convertDataToObj(data);
     } catch (e) {
-      return setTimeout(ApiData.showImgError, 200);
+      return setTimeout(ApiData.showImgError, 0);
     }
   }
 }

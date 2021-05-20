@@ -57,6 +57,7 @@ class Render {
     button.className = 'degrees';
     button.innerHTML = this.data.type;
     button.addEventListener('click', Render.checkDegrees);
+    container.innerHTML = ''
     container.append(button);
   }
 
@@ -75,5 +76,18 @@ class Render {
     
   }
   
+  renderWind() {
+    const p = document.createElement('p');
+    p.innerHTML = `WindSpeed: ${this.data.windSpeed}`;
+    p.className = 'temp-container';
+    this.content.append(p);
+  }
+
+  renderCountry() {
+    const p = document.createElement('p');
+    p.innerHTML = `Country: ${this.data.country}`;
+    p.className = 'temp-container';
+    this.content.append(p);
+  }
 }
 export default Render;
