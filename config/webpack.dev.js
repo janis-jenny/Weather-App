@@ -1,10 +1,10 @@
 const { merge } = require('webpack-merge');
 const base = require('./webpack.base');
+const Dotenv = require('dotenv-webpack');
 
 const devConfig = {
   mode: 'development',
   output: {
-
     assetModuleFilename: '[name][ext][query]',
   },
   devServer: {
@@ -13,6 +13,9 @@ const devConfig = {
     open: true,
     hot: true,
   },
+  plugins: [
+    new Dotenv()
+  ],
   module: {
     rules: [
       {
