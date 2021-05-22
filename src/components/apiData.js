@@ -23,8 +23,9 @@ class ApiData {
       temperature: ApiData.convertKtoC(data.main.temp).temp,
       humidity: data.main.humidity,
       climate: data.weather[0] ? data.weather[0].description : '',
-      icon: data.weather[0].icon,
       windSpeed: data.wind.speed,
+      icon: data.weather[0].icon,
+      weather: data.weather[0].main
     };
   }
 

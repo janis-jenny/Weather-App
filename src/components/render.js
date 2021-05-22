@@ -89,5 +89,28 @@ class Render {
     p.className = 'temp-container';
     this.content.append(p);
   }
+
+  renderBackground() {
+    const weather = this.data.weather[0].main.toLowerCase(),
+    const imgs = document.getElementById('body');
+    if (weather == "rain" || weather == "light rain" || weather == "shower rain") {
+      imgs.style.backgroundImage = "url(rain.gif)";
+    } else if (weather == "scattered clouds" || weather == "broken clouds" || weather == "clouds") {
+      imgs.style.backgroundImage = "url(cloud.gif)";
+    } else if (weather == "few clouds") {
+      imgs.style.backgroundImage = "url(few-clouds.gif)";
+    } else if (weather == "clear sky" || weather == "clear") {
+      imgs.style.backgroundImage = "url(sky.gif)";
+    } else if (weather == "thunderstorm") {
+      imgs.style.backgroundImage = "url(thunder.gif)";
+    } else if (weather == "snow") {
+      imgs.style.backgroundImage = "url(snow.gif)";
+    } else if (weather == "mist") {
+      imgs.style.backgroundImage = "url(mist.gif)";
+    } else {
+      imgs.style.backgroundImage = "url(background.gif)";
+    }
+  }
+  }
 }
 export default Render;
