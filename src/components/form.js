@@ -8,18 +8,19 @@ class Form {
 
   static renderData(value) {
     const render = new Render(value);
+
     render.renderDegrees();
     render.renderTemp();
     render.renderHumidity();
     render.renderClimate();
     render.renderWind();
     render.renderCountry();
+    render.renderBackground();
   }
 
   static weather(city) {
     const wheather = new ApiData(city.value);
     wheather.getApiData().then((value) => { Form.renderData(value); });
-    
   }
 
   createForm() {
@@ -40,7 +41,7 @@ class Form {
     return form;
   }
 
-  submitForm() {
+  static submitForm() {
     const form = document.getElementById('from-city');
     form.addEventListener('submit', (e) => {
       e.preventDefault();

@@ -3,8 +3,8 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const { merge } = require('webpack-merge');
-const base = require('./webpack.base');
 const Dotenv = require('dotenv-webpack');
+const base = require('./webpack.base');
 
 const prodConfig = {
   mode: 'production',
@@ -16,7 +16,7 @@ const prodConfig = {
     new MiniCssExtractPlugin({
       filename: '[name][contenthash].css',
     }),
-    new Dotenv()
+    new Dotenv(),
   ],
   module: {
     rules: [

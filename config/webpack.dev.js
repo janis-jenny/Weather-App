@@ -1,6 +1,6 @@
 const { merge } = require('webpack-merge');
-const base = require('./webpack.base');
 const Dotenv = require('dotenv-webpack');
+const base = require('./webpack.base');
 
 const devConfig = {
   mode: 'development',
@@ -14,7 +14,7 @@ const devConfig = {
     hot: true,
   },
   plugins: [
-    new Dotenv()
+    new Dotenv(),
   ],
   module: {
     rules: [

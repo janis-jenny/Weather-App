@@ -25,7 +25,7 @@ class ApiData {
       climate: data.weather[0] ? data.weather[0].description : '',
       windSpeed: data.wind.speed,
       icon: data.weather[0].icon,
-      weather: data.weather[0].main
+      weather: data.weather[0].main,
     };
   }
 
