@@ -1,5 +1,3 @@
-// import backgroundImg from '../images/background.jpg';
-
 class Render {
   constructor(data) {
     this.data = data;
@@ -90,7 +88,6 @@ class Render {
     p.className = 'temp-container';
     this.content.append(p);
   }
-
   /* renderBackground() {
     const weather = this.data.weather[0].main.toLowerCase();
     const imgs = document.getElementById('body');

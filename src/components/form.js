@@ -41,7 +41,7 @@ class Form {
     return form;
   }
 
-  submitForm() {
+  static submitForm() {
     const form = document.getElementById('from-city');
     form.addEventListener('submit', (e) => {
       e.preventDefault();
