@@ -30,6 +30,8 @@ class ApiData {
   }
 
   static showImgError() {
+    const cont = document.getElementById('container');
+    cont.innerHTML = '';
     const type = document.getElementById('type');
     type.innerHTML = '';
     const content = document.getElementById('content');
