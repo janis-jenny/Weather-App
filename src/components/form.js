@@ -1,5 +1,6 @@
 import ApiData from './apiData';
 import Render from './render';
+import renderBackground from './background';
 
 class Form {
   constructor() {
@@ -15,7 +16,9 @@ class Form {
     render.renderClimate();
     render.renderWind();
     render.renderCountry();
-    // render.renderBackground();
+    renderBackground(value);
+    console.log('HERE');
+    console.log(value);
   }
 
   static weather(city) {
@@ -41,7 +44,7 @@ class Form {
     return form;
   }
 
-  static submitForm() {
+  submitForm() {
     const form = document.getElementById('from-city');
     form.addEventListener('submit', (e) => {
       e.preventDefault();
