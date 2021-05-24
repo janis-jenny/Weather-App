@@ -91,12 +91,12 @@ class Render {
     this.content.append(p);
   }
 
-  renderBackground() {
+  /* renderBackground() {
     const weather = this.data.weather[0].main.toLowerCase();
     const imgs = document.getElementById('body');
-    imgs.style.backgroundImage = 'url(../images/background.jpg)';
+    imgs.style.backgroundImage = "url('../images/background.jpg')";
     if (weather === 'rain' || weather === 'light rain' || weather === 'shower rain') {
-      imgs.style.backgroundImage = 'url(rain.gif)';
+      imgs.style.backgroundImage = "url(rain.gif)";
     } else if (weather === 'scattered clouds' || weather === 'broken clouds' || weather === 'clouds') {
       imgs.style.backgroundImage = 'url(cloud.gif)';
     } else if (weather === 'few clouds') {
@@ -110,8 +110,8 @@ class Render {
     } else if (weather === 'mist') {
       imgs.style.backgroundImage = 'url(mist.gif)';
     } else {
-      imgs.style.backgroundImage = 'url(./images/background.jpg)';
+      imgs.style.backgroundImage = "url('../images/background.jpg')";
     }
-  }
+  } */
 }
 export default Render;

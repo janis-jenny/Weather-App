@@ -15,7 +15,7 @@ class Form {
     render.renderClimate();
     render.renderWind();
     render.renderCountry();
-    render.renderBackground();
+    // render.renderBackground();
   }
 
   static weather(city) {
@@ -41,7 +41,7 @@ class Form {
     return form;
   }
 
-  static submitForm() {
+  submitForm() {
     const form = document.getElementById('from-city');
     form.addEventListener('submit', (e) => {
       e.preventDefault();
