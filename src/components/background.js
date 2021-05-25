@@ -11,7 +11,6 @@ import mist from '../images/mist.gif';
 /* eslint-enable  no-unused-vars */
 
 const renderBackground = (data) => {
-  console.log(data.weather.toLowerCase());
   const weather = data.weather.toLowerCase();
   document.body.style.backgroundImage = background;
   if (weather === 'rain' || weather === 'light rain' || weather === 'shower rain') {
