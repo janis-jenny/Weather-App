@@ -36,6 +36,7 @@ class Form {
     input.type = 'text';
     input.name = 'city';
     input.placeholder = 'Type a city';
+    button.className = 'submit-btn';
     button.innerHTML = '<i class="fas fa-search"></i>';
     button.type = 'submit';
     form.append(input);

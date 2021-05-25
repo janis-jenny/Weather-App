@@ -1,6 +1,6 @@
 /* eslint-disable linebreak-style */
 import { BASE_URL, API_KEY } from './api';
-import Error404 from '../images/Error404.png';
+import Error404 from '../images/Error404.jpg';
 
 class ApiData {
   constructor(city) {
@@ -30,8 +30,6 @@ class ApiData {
   }
 
   static showImgError() {
-    const cont = document.getElementById('container');
-    cont.innerHTML = '';
     const type = document.getElementById('type');
     type.innerHTML = '';
     const content = document.getElementById('content');
