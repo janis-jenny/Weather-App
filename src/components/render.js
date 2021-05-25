@@ -52,9 +52,10 @@ class Render {
 
   renderDegrees() {
     const container = document.getElementById('type');
+    container.classList.add('d-flex');
     const button = document.createElement('button');
     button.id = 'degrees';
-    button.className = 'degrees';
+    button.classList.add('degrees');
     button.innerHTML = this.data.type;
     button.addEventListener('click', Render.checkDegrees);
     container.innerHTML = '';
@@ -88,6 +89,5 @@ class Render {
     p.className = 'temp-container';
     this.content.append(p);
   }
-
 }
 export default Render;

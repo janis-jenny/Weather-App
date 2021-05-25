@@ -8,6 +8,12 @@
   font-family: 'Fredoka One', sans-serif;
 }
 
+h1 {
+  color: #f3f3f3;
+  text-align: center;
+  padding: 2rem 0;
+}
+
 #body {
   background-image: url('../images/background.jpg');
   background-repeat: no-repeat;
@@ -18,24 +24,15 @@
   height: 100vh;
 }
 
-.form-container {
+.d-flex {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  margin: 1.9rem 2.8rem;
 }
 
-input[type='text'] {
-  width: 18rem;
-  height: 100%;
-  border: none;
-  outline: none;
-  background: rgba(255, 255, 255, 0.2);
-  padding: 0 0 0.3rem 4.5rem;
-  color: #ffffff;
-  font-size: 1.5rem;
-  border-radius: 0.5rem;
+.form-container {
+  position: relative;
+  margin: 1.9rem 2.8rem;
 }
 
 .submit-btn {
@@ -48,13 +45,30 @@ input[type='text'] {
   cursor: pointer;
 }
 
+.fa-search {
+  color: #f3f3f3;
+  font-size: 1.2rem;
+}
+
+input[type='text'] {
+  width: 18rem;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.3rem 4.9rem;
+  color: #f3f3f3;
+  font-size: 1.6rem;
+  border-radius: 0.5rem;
+}
+
 input[type='text']::placeholder {
   color: #f3f3f3;
 }
 
 .degrees {
   background-color: #00000091;
-  color: white;
+  color: #f3f3f3;
   font-size: 2rem;
   font-weight: bold;
   border-radius: 2rem;
@@ -66,4 +80,30 @@ input[type='text']::placeholder {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 30%;
+  width: 100%;
+  color: #f3f3f3;
+}
+
+.city-name {
+  margin-top: 3rem;
+}
+
+.temp-container {
+  font-size: 1.1rem;
+  border-radius: 0.5rem;
+  margin: 0.3rem;
+  text-align: center;
+  width: 10rem;
+  padding: 0.5rem;
+  font-weight: bold;
+  background-color: #00000091;
 }

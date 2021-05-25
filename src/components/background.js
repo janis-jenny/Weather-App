@@ -1,21 +1,22 @@
 // eslint disable-linebreak-style
 // eslint disable-max-len
-import background from '../images/background.jpg'
-import clouds from '../images/clouds.gif'
-import clear from '../images/clear_sky.gif'
-import rain from '../images/rain.gif'
-import thunder from '../images/thunder.gif'
-import snow from '../images/snow.gif'
-import mist from '../images/mist.gif'
+import background from '../images/background.jpg';
+/* eslint-disable  no-unused-vars */
+import clouds from '../images/clouds.gif';
+import clear from '../images/clear_sky.gif';
+import rain from '../images/rain.gif';
+import thunder from '../images/thunder.gif';
+import snow from '../images/snow.gif';
+import mist from '../images/mist.gif';
+/* eslint-enable  no-unused-vars */
 
 const renderBackground = (data) => {
   console.log(data.weather.toLowerCase());
   const weather = data.weather.toLowerCase();
   document.body.style.backgroundImage = background;
   if (weather === 'rain' || weather === 'light rain' || weather === 'shower rain') {
-    document.body.style.backgroundImage = 'url(rain.gif)'; 
+    document.body.style.backgroundImage = 'url(rain.gif)';
   } else if (weather === 'scattered clouds' || weather === 'broken clouds' || weather === 'clouds' || weather === 'few clouds') {
-    console.log('AQUI!')
     document.body.style.backgroundImage = 'url(clouds.gif)';
   } else if (weather === 'clear sky' || weather === 'clear') {
     document.body.style.backgroundImage = 'url(clear_sky.gif)';
@@ -28,6 +29,6 @@ const renderBackground = (data) => {
   } else {
     document.body.style.backgroundImage = background;
   }
-}
+};
 
-export default renderBackground
+export default renderBackground;

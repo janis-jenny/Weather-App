@@ -30,7 +30,7 @@ class Form {
     const form = document.createElement('form');
     const input = document.createElement('input');
     const button = document.createElement('button');
-    this.container.className = 'form-container';
+    this.container.classList.add('form-container', 'd-flex');
     form.action = '/home';
     form.id = 'from-city';
     input.type = 'text';
@@ -45,6 +45,7 @@ class Form {
     return form;
   }
 
+  /* eslint-disable  class-methods-use-this */
   submitForm() {
     const form = document.getElementById('from-city');
     form.addEventListener('submit', (e) => {
@@ -54,6 +55,7 @@ class Form {
       cityInput.value = '';
     });
   }
+  /* eslint-enable  class-methods-use-this */
 }
 
 export default Form;

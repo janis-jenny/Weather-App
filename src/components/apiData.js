@@ -1,6 +1,6 @@
 /* eslint-disable linebreak-style */
 import { BASE_URL, API_KEY } from './api';
-import Error404 from '../images/Error404.jpg';
+import Error404 from '../images/Error404.gif';
 
 class ApiData {
   constructor(city) {
