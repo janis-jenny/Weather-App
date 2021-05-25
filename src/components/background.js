@@ -12,21 +12,21 @@ import mist from '../images/mist.gif';
 
 const renderBackground = (data) => {
   const weather = data.weather.toLowerCase();
-  document.body.style.backgroundImage = background;
+  document.body.style.backgroundImage = `url(${background})`;
   if (weather === 'rain' || weather === 'light rain' || weather === 'shower rain') {
-    document.body.style.backgroundImage = 'url(rain.gif)';
+    document.body.style.backgroundImage = `url(${rain})`;
   } else if (weather === 'scattered clouds' || weather === 'broken clouds' || weather === 'clouds' || weather === 'few clouds') {
-    document.body.style.backgroundImage = 'url(clouds.gif)';
+    document.body.style.backgroundImage = `url(${clouds})`;
   } else if (weather === 'clear sky' || weather === 'clear') {
-    document.body.style.backgroundImage = 'url(clear_sky.gif)';
+    document.body.style.backgroundImage = `url(${clear})`;
   } else if (weather === 'thunderstorm') {
-    document.body.style.backgroundImage = 'url(thunder.gif)';
+    document.body.style.backgroundImage = `url(${thunder})`;
   } else if (weather === 'snow') {
-    document.body.style.backgroundImage = 'url(snow.gif)';
+    document.body.style.backgroundImage =`url(${snow})`;
   } else if (weather === 'mist') {
-    document.body.style.backgroundImage = 'url(mist.gif)';
+    document.body.style.backgroundImage = `url(${mist})`;
   } else {
-    document.body.style.backgroundImage = background;
+    document.body.style.backgroundImage = `url(${background})`;
   }
 };
 
