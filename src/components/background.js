@@ -1,14 +1,10 @@
-// eslint disable-linebreak-style
-// eslint disable-max-len
 import background from '../images/background.jpg';
-/* eslint-disable  no-unused-vars */
 import clouds from '../images/clouds.gif';
 import clear from '../images/clear_sky.gif';
 import rain from '../images/rain.gif';
 import thunder from '../images/thunder.gif';
 import snow from '../images/snow.gif';
 import mist from '../images/mist.gif';
-/* eslint-enable  no-unused-vars */
 
 const renderBackground = (data) => {
   const weather = data.weather.toLowerCase();
@@ -22,7 +18,7 @@ const renderBackground = (data) => {
   } else if (weather === 'thunderstorm') {
     document.body.style.backgroundImage = `url(${thunder})`;
   } else if (weather === 'snow') {
-    document.body.style.backgroundImage =`url(${snow})`;
+    document.body.style.backgroundImage = `url(${snow})`;
   } else if (weather === 'mist') {
     document.body.style.backgroundImage = `url(${mist})`;
   } else {
