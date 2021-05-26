@@ -1,31 +1,33 @@
-const base = require("./webpack.base");
-const { merge } = require("webpack-merge");
+const { merge } = require('webpack-merge');
+const Dotenv = require('dotenv-webpack');
+const base = require('./webpack.base');
 
 const devConfig = {
-  mode: "development",
+  mode: 'development',
   output: {
-    
-    assetModuleFilename: '[name][ext][query]'
+    assetModuleFilename: '[name][ext][query]',
   },
   devServer: {
     port: 3000,
-    contentBase: "../dist",
+    contentBase: '../dist',
     open: true,
-    hot:true
+    hot: true,
   },
+  plugins: [
+    new Dotenv(),
+  ],
   module: {
-    rules: [
-      {
-        test: /.(scss)$/,
-        use: [
-          "style-loader",
-          "css-loader",
-          "sass-loader"
-        ]
-      }
-    ]
+    rules: [{
+      test: /\.css$/i,
+      use: ['style-loader', 'css-loader'],
+    },
+    {
+      test: /\.(png|svg|jpg|jpeg|gif)$/i,
+      type: 'asset/resource',
+    },
+    ],
   },
-  
-}
 
-module.exports = merge(base, devConfig)
+};
+
+module.exports = merge(base, devConfig);

@@ -1,0 +1,184 @@
+/* Body */
+
+:root {
+  --color1: #f3f3f3;
+  --color2: #fff3;
+  --color3: #0000;
+  --color4: #00000091;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: 'Fredoka One', sans-serif;
+}
+
+h1 {
+  color: var(--color1);
+  text-align: center;
+  margin-top: 0.7rem;
+  padding: 1rem 0;
+}
+
+#body {
+  background-image: url('../images/background.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.d-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-container {
+  position: relative;
+  margin: 1.5rem 2.8rem;
+}
+
+.submit-btn {
+  position: absolute;
+  top: 27%;
+  left: 40%;
+  background-color: var(--color3);
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.fa-search {
+  color: var(--color1);
+  font-size: 1.2rem;
+}
+
+input[type='text'] {
+  width: 18rem;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: var(--color2);
+  padding: 0.3rem 4.9rem;
+  color: var(--color1);
+  font-size: 1.6rem;
+  border-radius: 0.5rem;
+}
+
+input[type='text']::placeholder {
+  color: var(--color1);
+}
+
+#degrees {
+  background-color: var(--color4);
+  color: var(--color1);
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 2rem;
+  border: none;
+  margin: 0.3rem 0;
+  padding: 0.3rem 0.8rem;
+}
+
+#degrees:active {
+  transform: scale(1.06);
+}
+
+#content {
+  flex-direction: column;
+  position: absolute;
+  top: 33%;
+  width: 100%;
+  color: var(--color1);
+}
+
+.city-name {
+  margin: 1rem 0;
+  padding: 0;
+}
+
+.temp-container {
+  font-size: 1.1rem;
+  border-radius: 0.5rem;
+  margin: 0.3rem;
+  text-align: center;
+  width: 10rem;
+  padding: 0.5rem;
+  font-weight: bold;
+  background-color: var(--color4);
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 768px) {
+  .submit-btn {
+    position: absolute;
+    top: 27%;
+    left: 16%;
+    background-color: var(--color3);
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  h1 {
+    color: var(--color1);
+    text-align: center;
+    margin-top: 0.6rem;
+    padding: 0.5rem 0;
+    font-size: 1.5rem;
+  }
+
+  #content {
+    flex-direction: column;
+    position: absolute;
+    top: 36%;
+    width: 100%;
+    color: var(--color1);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .submit-btn {
+    position: absolute;
+    top: 27%;
+    left: 35%;
+    background-color: var(--color3);
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 1023px) {
+  .submit-btn {
+    position: absolute;
+    top: 27%;
+    left: 40%;
+    background-color: var(--color3);
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  h1 {
+    color: var(--color1);
+    text-align: center;
+    margin-top: 0.6rem;
+    padding: 0.5rem 0;
+    font-size: 1.6rem;
+  }
+
+  #content {
+    flex-direction: column;
+    position: absolute;
+    top: 36%;
+    width: 100%;
+    color: var(--color1);
+  }
+}

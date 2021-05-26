@@ -1,17 +1,7 @@
-import "./scss/styles.scss"
+import './css/stylesheet.css';
+import Form from './components/form';
 
-const container = document.querySelector('.joke-container');
+const form = new Form();
 
-const requestJoke = async () => {
-  const url = "https://api.chucknorris.io/jokes/random";
-  const response = await fetch(url);
-  const json = await response.json();
-  return json;
-}
-
-const displayJoke = async () => {
-  const joke = await requestJoke();
-  container.innerText = joke.value
-}
-
-displayJoke()
+form.createForm();
+form.submitForm();
