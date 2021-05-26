@@ -46,7 +46,7 @@ h1 {
 .submit-btn {
   position: absolute;
   top: 27%;
-  left: 42%;
+  left: 40%;
   background-color: var(--color3);
   border: none;
   outline: none;
@@ -85,6 +85,10 @@ input[type='text']::placeholder {
   padding: 0.3rem 0.8rem;
 }
 
+#degrees:active {
+  transform: scale(1.06);
+}
+
 #content {
   flex-direction: column;
   position: absolute;
@@ -109,26 +113,72 @@ input[type='text']::placeholder {
   background-color: var(--color4);
 }
 
-/*
-===========================================================
-                     MEDIA QUERIES
- ==========================================================
-*/
+/* MEDIA QUERIES */
 
-/*
 @media screen and (max-width: 768px) {
-  .instrument {
-    height: 12rem;
+  .submit-btn {
+    position: absolute;
+    top: 27%;
+    left: 16%;
+    background-color: var(--color3);
+    border: none;
+    outline: none;
+    cursor: pointer;
   }
 
-  .sort {
-    display: none;
+  h1 {
+    color: var(--color1);
+    text-align: center;
+    margin-top: 0.6rem;
+    padding: 0.5rem 0;
+    font-size: 1.5rem;
   }
 
-  .main .slide {
-    display: none;
+  #content {
+    flex-direction: column;
+    position: absolute;
+    top: 36%;
+    width: 100%;
+    color: var(--color1);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .submit-btn {
+    position: absolute;
+    top: 27%;
+    left: 35%;
+    background-color: var(--color3);
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 1023px) {
+  .submit-btn {
+    position: absolute;
+    top: 27%;
+    left: 40%;
+    background-color: var(--color3);
+    border: none;
+    outline: none;
+    cursor: pointer;
   }
 
-  max-width: 50px;
-  max-height: 50px;
-} */
+  h1 {
+    color: var(--color1);
+    text-align: center;
+    margin-top: 0.6rem;
+    padding: 0.5rem 0;
+    font-size: 1.6rem;
+  }
+
+  #content {
+    flex-direction: column;
+    position: absolute;
+    top: 36%;
+    width: 100%;
+    color: var(--color1);
+  }
+}
