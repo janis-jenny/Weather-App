@@ -2,8 +2,8 @@
 
 :root {
   --color1: #f3f3f3;
-  --color2: #ffffff33;
-  --color3: #00000000;
+  --color2: #fff3;
+  --color3: #0000;
   --color4: #00000091;
 }
 
@@ -18,7 +18,8 @@
 h1 {
   color: var(--color1);
   text-align: center;
-  padding: 2rem 0;
+  margin-top: 0.7rem;
+  padding: 1rem 0;
 }
 
 #body {
@@ -39,7 +40,7 @@ h1 {
 
 .form-container {
   position: relative;
-  margin: 1.9rem 2.8rem;
+  margin: 1.5rem 2.8rem;
 }
 
 .submit-btn {
@@ -80,7 +81,7 @@ input[type='text']::placeholder {
   font-weight: bold;
   border-radius: 2rem;
   border: none;
-  margin: 0.5rem 0;
+  margin: 0.3rem 0;
   padding: 0.3rem 0.8rem;
 }
 
@@ -93,8 +94,8 @@ input[type='text']::placeholder {
 }
 
 .city-name {
-  margin-top: 0;
-  padding-top: 3rem;
+  margin: 1rem 0;
+  padding: 0;
 }
 
 .temp-container {
@@ -107,3 +108,27 @@ input[type='text']::placeholder {
   font-weight: bold;
   background-color: var(--color4);
 }
+
+/*
+===========================================================
+                     MEDIA QUERIES
+ ==========================================================
+*/
+
+/*
+@media screen and (max-width: 768px) {
+  .instrument {
+    height: 12rem;
+  }
+
+  .sort {
+    display: none;
+  }
+
+  .main .slide {
+    display: none;
+  }
+
+  max-width: 50px;
+  max-height: 50px;
+} */

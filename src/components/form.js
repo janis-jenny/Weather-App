@@ -9,7 +9,7 @@ class Form {
 
   static renderData(value) {
     const render = new Render(value);
-    
+
     render.renderDegrees();
     render.renderTemp();
     render.renderHumidity();
