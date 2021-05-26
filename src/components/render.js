@@ -2,6 +2,7 @@ class Render {
   constructor(data) {
     this.data = data;
     this.content = document.getElementById('content');
+    this.content.className = 'd-flex'
   }
 
   renderTemp() {
@@ -52,16 +53,15 @@ class Render {
 
   renderDegrees() {
     const container = document.getElementById('type');
-    container.classList.add('d-flex');
+    container.className = 'd-flex';
     const button = document.createElement('button');
     button.id = 'degrees';
-    button.classList.add('degrees');
     button.innerHTML = this.data.type;
     button.addEventListener('click', Render.checkDegrees);
     container.innerHTML = '';
     container.append(button);
   }
-
+  
   renderHumidity() {
     const p = document.createElement('p');
     p.innerHTML = `Humidity: ${this.data.humidity}`;

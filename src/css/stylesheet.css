@@ -1,5 +1,12 @@
 /* Body */
 
+:root {
+  --color1: #f3f3f3;
+  --color2: #ffffff33;
+  --color3: #00000000;
+  --color4: #00000091;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +16,7 @@
 }
 
 h1 {
-  color: #f3f3f3;
+  color: var(--color1);
   text-align: center;
   padding: 2rem 0;
 }
@@ -38,15 +45,15 @@ h1 {
 .submit-btn {
   position: absolute;
   top: 27%;
-  left: 40%;
-  background-color: rgba(0, 0, 0, 0);
+  left: 42%;
+  background-color: var(--color3);
   border: none;
   outline: none;
   cursor: pointer;
 }
 
 .fa-search {
-  color: #f3f3f3;
+  color: var(--color1);
   font-size: 1.2rem;
 }
 
@@ -55,46 +62,39 @@ input[type='text'] {
   height: 100%;
   border: none;
   outline: none;
-  background: rgba(255, 255, 255, 0.2);
+  background: var(--color2);
   padding: 0.3rem 4.9rem;
-  color: #f3f3f3;
+  color: var(--color1);
   font-size: 1.6rem;
   border-radius: 0.5rem;
 }
 
 input[type='text']::placeholder {
-  color: #f3f3f3;
+  color: var(--color1);
 }
 
-.degrees {
-  background-color: #00000091;
-  color: #f3f3f3;
+#degrees {
+  background-color: var(--color4);
+  color: var(--color1);
   font-size: 2rem;
   font-weight: bold;
   border-radius: 2rem;
   border: none;
+  margin: 0.5rem 0;
   padding: 0.3rem 0.8rem;
 }
 
-.type {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.content {
-  display: flex;
+#content {
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   position: absolute;
-  top: 30%;
+  top: 33%;
   width: 100%;
-  color: #f3f3f3;
+  color: var(--color1);
 }
 
 .city-name {
-  margin-top: 3rem;
+  margin-top: 0;
+  padding-top: 3rem;
 }
 
 .temp-container {
@@ -105,5 +105,5 @@ input[type='text']::placeholder {
   width: 10rem;
   padding: 0.5rem;
   font-weight: bold;
-  background-color: #00000091;
+  background-color: var(--color4);
 }

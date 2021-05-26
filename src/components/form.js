@@ -9,7 +9,7 @@ class Form {
 
   static renderData(value) {
     const render = new Render(value);
-
+    
     render.renderDegrees();
     render.renderTemp();
     render.renderHumidity();
@@ -17,13 +17,13 @@ class Form {
     render.renderWind();
     render.renderCountry();
     renderBackground(value);
-    console.log('HERE');
-    console.log(value);
   }
 
   static weather(city) {
     const wheather = new ApiData(city.value);
-    wheather.getApiData().then((value) => { Form.renderData(value); });
+    wheather.getApiData().then((value) => {
+      Form.renderData(value);
+    });
   }
 
   createForm() {
