@@ -36,7 +36,7 @@
 
 ## 🔴 Live Demo:
 
-[Demo]()
+[Weather App](https://janis-jenny.github.io/Weather-App/)
 
 
 
@@ -58,9 +58,10 @@ To get a local copy up and running follow these simple steps:
 2. Press the "Code" button and copy the link.
 3. Clone it using git command `git clone <you_repository_link>`.
 4. Move to the local project: cd `<Your_repository_name>`.
-5. Run `npm install` to get all the dependencies.
-6. If you want to run the development mode run: `npm run dev`.
-7. Run `npm run watch` to run webpack build in watch mode.
+5. Install webpack locally, go to the repo's root an run `npm install --save-dev webpack`
+6. Run `npm install` to get all the dependencies.
+7. If you want to run the development mode run: `npm run dev`. This will build the project using webpack and bundle everything into the /dist folder.
+8. Run `npm run watch` to run webpack build in watch mode. This will build and update the project in the /dist folder actively, meaning changes will update /dist. You will, however, have to refresh the browser to see changes.
 
 
 
