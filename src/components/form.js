@@ -46,7 +46,7 @@ class Form {
   }
 
   /* eslint-disable  class-methods-use-this */
-  submitForm() {
+  /* submitForm() {
     const form = document.getElementById('from-city');
     form.addEventListener('submit', (e) => {
       e.preventDefault();
@@ -54,7 +54,7 @@ class Form {
       Form.weather(cityInput);
       cityInput.value = '';
     });
-  }
+  } */
   /* eslint-enable  class-methods-use-this */
 }
 
