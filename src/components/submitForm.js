@@ -8,6 +8,6 @@ const submitForm = () => {
     Form.weather(cityInput);
     cityInput.value = '';
   });
-}
+};
 
 export default submitForm;

@@ -9,7 +9,7 @@ import mist from '../images/mist.gif';
 const renderBackground = (data) => {
   const weather = data.weather.toLowerCase();
   document.body.style.backgroundImage = `url(${background})`;
-  if (weather === 'rain' || weather === 'light rain' || weather === 'shower rain'|| weather === 'drizzle') {
+  if (weather === 'rain' || weather === 'light rain' || weather === 'shower rain' || weather === 'drizzle') {
     document.body.style.backgroundImage = `url(${rain})`;
   } else if (weather === 'scattered clouds' || weather === 'broken clouds' || weather === 'clouds' || weather === 'few clouds') {
     document.body.style.backgroundImage = `url(${clouds})`;
