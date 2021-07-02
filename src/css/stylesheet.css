@@ -15,13 +15,6 @@
   font-family: 'Fredoka One', sans-serif;
 }
 
-h1 {
-  color: var(--color1);
-  text-align: center;
-  margin-top: 0.7rem;
-  padding: 1rem 0;
-}
-
 #body {
   background-image: url('../images/background.jpg');
   background-repeat: no-repeat;
@@ -40,7 +33,7 @@ h1 {
 
 .form-container {
   position: relative;
-  margin: 1.5rem 2.8rem;
+  padding: 3.7rem 0.8rem;
 }
 
 .submit-btn {
@@ -56,6 +49,7 @@ h1 {
 .fa-search {
   color: var(--color1);
   font-size: 1.2rem;
+  padding-top: 1.5rem;
 }
 
 input[type='text'] {
@@ -92,7 +86,7 @@ input[type='text']::placeholder {
 #content {
   flex-direction: column;
   position: absolute;
-  top: 33%;
+  top: 23%;
   width: 100%;
   color: var(--color1);
 }
@@ -118,8 +112,8 @@ input[type='text']::placeholder {
 @media screen and (max-width: 768px) {
   .submit-btn {
     position: absolute;
-    top: 27%;
-    left: 16%;
+    top: 30%;
+    left: 21%;
     background-color: var(--color3);
     border: none;
     outline: none;
@@ -158,7 +152,7 @@ input[type='text']::placeholder {
 @media screen and (min-width: 1023px) {
   .submit-btn {
     position: absolute;
-    top: 27%;
+    top: 29%;
     left: 40%;
     background-color: var(--color3);
     border: none;
